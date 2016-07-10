@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="statement_list_title_size">22sp</dimen>
+    <dimen name="list_imig_width">100dp</dimen>
+    <dimen name="list_imig_hiegth">160dp</dimen>
+    <dimen name="list_item_padding">6dp</dimen>
+    <dimen name="gap_from_image">12dp</dimen>
+    <dimen name="text_margin_in_list">6dp</dimen>
+    <dimen name="add_statement_inline_padding">6dp</dimen>
+    <dimen name="fab_marg_right">22dp</dimen>
+    <dimen name="fab_marg_bottom">22dp</dimen>
+    <dimen name="man_width">15dp</dimen>
+    <dimen name="cardCorner">4dp</dimen>
+    <dimen name="header_hiegth">180dp</dimen>
+    <dimen name="cardViewMargin">4dp</dimen>
+</resources>

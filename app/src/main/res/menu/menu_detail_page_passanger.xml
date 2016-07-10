@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.kdiakonidze.pickmeapp.DetailPagePassanger">
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/edit_dr_manu"
+        android:title="@string/in_manu_edit"
+        android:icon="@drawable/ic_mode_edit_white_36dp"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/fav_dr_manu"
+        android:title="favor"
+        android:icon="@drawable/ic_star_border_white_24dp"
+        android:orderInCategory="400"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/del_dr_manu"
+        android:title="@string/in_manu_del"
+        android:icon="@drawable/del_icon"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom" />
+</menu>

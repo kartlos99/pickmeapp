@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">PickMeApp</string>
+
+    <string name="facebook_app_id">1716715945263526</string>
+
+    <string name="ST_condicioner">კონდიციონერი</string>
+    <string name="ST_sigar">არამწეველი</string>
+    <string name="ST_athome">ადგილზე მისვლა</string>
+    <string name="ST_baggage">ბარგი</string>
+    <string name="ST_animals">შ.ცხოველები</string>
+
+    <string name="ST_exit">გასვლა</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_add_statement">ახალი განცხ.</string>
+    <string-array name="cityes">
+        <item>თბილისი</item>
+        <item>ბათუმი</item>
+        <item>ქუთაისი</item>
+        <item>ბორჯომი</item>
+        <item>სტეფანწმინდა</item>
+    </string-array>
+    <string-array name="tarigi">
+        <item>დღეს</item>
+        <item>ხვალ</item>
+        <item>ზეგ</item>
+        <item>სხვა</item>
+    </string-array>
+    <string-array name="day_time">
+        <item>სულერთია</item>
+        <item>დილით</item>
+        <item>შუადგეს</item>
+        <item>საღამოს</item>
+        <item>სხვა</item>
+    </string-array>
+    <string-array name="veh_color">
+        <item>თეთრი</item>
+        <item>შავი</item>
+        <item>წითელი</item>
+        <item>ყვითელი</item>
+        <item>ლურჯი</item>
+    </string-array>
+    <string-array name="numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="passanger_sex">
+        <item>სულერთია</item>
+        <item>კაცი</item>
+        <item>ქალი</item>
+    </string-array>
+    <string name="title_activity_detail_page">DetailPage</string>
+
+    <!-- navigationDrawer-is menus dasaxelebebi-->
+    <string name="manu_filter">ფილტრი</string>
+    <string name="manu_filter_cancel">ფილტრის მოხსნა</string>
+    <string name="manu_add">განცხ. დამატება</string>
+    <string name="manu_favorites">რჩეული განცხ.</string>
+    <string name="manu_mystatm">ჩემი განცხ.</string>
+    <string name="manu_privit_info">პირადი ინფო</string>
+
+    <string name="manu_FBlogin">FB ავტორიზაცია</string>
+    <string name="manu_FBlogout">FB დატოვება</string>
+    <string name="manu_exit">გასვლა</string>
+
+    <string name="openDrawer">OpenDrawer</string>
+    <string name="closeDrawer">CloseDrawer</string>
+    <string name="title_activity_detail_page_passanger">DetailPagePassanger</string>
+    <string name="title_activity_my_statements">MyStatements</string>
+    <string name="title_activity_favorite_statements">FavoriteStatements</string>
+    <string name="in_manu_del">Delete</string>
+    <string name="in_manu_edit">edit</string>
+    <string name="title_activity_edit_my_statement">ჩემი განცხ.</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+</resources>

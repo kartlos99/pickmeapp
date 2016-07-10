@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/manuFilter"
+            android:checked="false"
+            android:icon="@drawable/filter_black"
+            android:title="@string/manu_filter" />
+
+        <item
+            android:id="@+id/manuAdd"
+            android:checked="false"
+            android:icon="@drawable/ic_add_white_24dp"
+            android:title="@string/manu_add" />
+
+        <item
+            android:id="@+id/manuFav"
+            android:checked="false"
+            android:icon="@drawable/ic_star_black_24dp"
+            android:title="@string/manu_favorites" />
+
+        <item
+            android:id="@+id/manuMy"
+            android:checked="false"
+            android:icon="@drawable/ic_list_black_24dp"
+            android:title="@string/manu_mystatm" />
+
+        <item
+            android:id="@+id/manuPrivit"
+            android:checked="false"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:title="@string/manu_privit_info" />
+
+        <item
+            android:id="@+id/manuFBlogin"
+            android:checked="false"
+            android:icon="@drawable/fb_logo1"
+            android:title="@string/manu_FBlogin" />
+
+        <item
+            android:id="@+id/manuExit"
+            android:checked="false"
+            android:icon="@drawable/ic_close_black_24dp"
+            android:title="@string/manu_exit" />
+
+    </group>
+</menu>

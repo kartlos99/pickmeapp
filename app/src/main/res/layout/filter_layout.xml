@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/add_statement_inline_padding"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="განცხადების\nტიპი"
+            android:textSize="@dimen/text_size_in_filter" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/filterDriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ტრანსპორტი"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/filterPassanger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="მგზავრი"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size_in_filter"
+            android:layout_height="@dimen/icon_size_in_filter"
+            android:layout_margin="@dimen/add_statement_inline_padding"
+            android:scaleType="centerInside"
+            android:src="@drawable/pin" />
+
+        <AutoCompleteTextView
+            android:id="@+id/filter1_cityfrom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="6"
+            android:focusableInTouchMode="true"
+            android:hint="საიდან"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_in_filter" />
+
+        <AutoCompleteTextView
+            android:id="@+id/filter1_cityto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="6"
+            android:focusableInTouchMode="true"
+            android:hint="საით"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_in_filter" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size_in_filter"
+            android:layout_height="@dimen/icon_size_in_filter"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/add_statement_inline_padding"
+            android:scaleType="centerInside"
+            android:src="@drawable/time" />
+
+        <Spinner
+            android:id="@+id/filter_time1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:text="დღეს"
+            android:textSize="@dimen/text_size_in_filter" />
+
+        <Spinner
+            android:id="@+id/filter_time2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:text="xval"
+            android:textSize="@dimen/text_size_in_filter" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:elevation="6dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/add_statement_inline_padding">
+
+        <Button
+            android:id="@+id/filter_pirobebi_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/greenbtn_dark"
+            android:text="პირობები"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/filter_comfortBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filter_pirobebi_btn"
+            android:animateLayoutChanges="true"
+            android:visibility="gone">
+
+
+            <CheckBox
+                android:id="@+id/filter_conditioner_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/ST_condicioner"
+                android:textSize="@dimen/text_size_in_filter" />
+
+            <CheckBox
+                android:id="@+id/filter_atplace_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/filter_conditioner_checkBox"
+                android:text="@string/ST_athome"
+                android:textSize="@dimen/text_size_in_filter" />
+
+            <CheckBox
+                android:id="@+id/filter_cigar_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter_conditioner_checkBox"
+                android:layout_marginBottom="6dp"
+                android:text="@string/ST_sigar"
+                android:textSize="@dimen/text_size_in_filter" />
+
+            <CheckBox
+                android:id="@+id/filter_baggage_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter_conditioner_checkBox"
+                android:layout_toEndOf="@+id/filter_cigar_checkBox"
+                android:layout_toRightOf="@id/filter_cigar_checkBox"
+                android:text="@string/ST_baggage"
+                android:textSize="@dimen/text_size_in_filter" />
+
+            <CheckBox
+                android:id="@+id/filter_animal_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter_conditioner_checkBox"
+                android:layout_toEndOf="@+id/filter_baggage_checkBox"
+                android:layout_toRightOf="@id/filter_baggage_checkBox"
+                android:text="@string/ST_animals"
+                android:textSize="@dimen/text_size_in_filter" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/filter_Exit_Btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ST_exit" />
+        <Button
+            android:id="@+id/filter_Btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="გაფილტვრა" />
+
+    </LinearLayout>
+
+</LinearLayout>

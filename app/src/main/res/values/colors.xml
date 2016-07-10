@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="date_color">#ff1b9789</color>
+    <color name="ColorPrimary">#009587</color>
+    <color name="ColorPrimaryDark">#008070</color>
+    <color name="fab_color">#f9ad19</color>
+    <color name="tabsScrollColor">#8a148e</color>
+</resources>

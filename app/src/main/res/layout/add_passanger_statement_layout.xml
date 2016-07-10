@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/add_passanger_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:divider="@drawable/linedividerhorizontal"
+            android:dividerPadding="20dp"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/add_statement_inline_padding">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_in_detail_page"
+                    android:layout_height="@dimen/icon_size_in_detail_page"
+                    android:layout_marginLeft="@dimen/add_statement_inline_padding"
+                    android:layout_marginRight="@dimen/add_statement_inline_padding"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/pin" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/passanger_cityfrom"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:focusableInTouchMode="true"
+                    android:hint="საიდან"
+                    android:singleLine="true" />
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/passanger_cityto"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:focusableInTouchMode="true"
+                    android:hint="საით"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/add_statement_inline_padding">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_in_detail_page"
+                    android:layout_height="@dimen/icon_size_in_detail_page"
+                    android:layout_marginLeft="@dimen/add_statement_inline_padding"
+                    android:layout_marginRight="@dimen/add_statement_inline_padding"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/time" />
+
+                <Spinner
+                    android:id="@+id/passanger_date_spiner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:text="დღეს" />
+
+                <Spinner
+                    android:id="@+id/passanger_time_spiner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:text="00:00" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/add_statement_inline_padding">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_in_detail_page"
+                    android:layout_height="@dimen/icon_size_in_detail_page"
+                    android:layout_marginLeft="@dimen/add_statement_inline_padding"
+                    android:layout_marginRight="@dimen/add_statement_inline_padding"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/man_detail" />
+
+                <Spinner
+                    android:id="@+id/passanger_freespace_spiner"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/add_statement_inline_padding">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_in_detail_page"
+                    android:layout_height="@dimen/icon_size_in_detail_page"
+                    android:layout_marginLeft="@dimen/add_statement_inline_padding"
+                    android:layout_marginRight="@dimen/add_statement_inline_padding"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/lari2" />
+
+                <Spinner
+                    android:id="@+id/passanger_price_spiner"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:elevation="6dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/add_statement_inline_padding">
+
+                <Button
+                    android:id="@+id/passanger_pirobebi_btn"
+                    android:layout_width="match_parent"
+                    android:text="პირობები"
+                    android:layout_height="50dp"
+                    android:background="@drawable/greenbtn_dark"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/comfort1_passanger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/passanger_pirobebi_btn"
+                    android:animateLayoutChanges="true"
+                    android:visibility="gone">
+
+
+                    <CheckBox
+                        android:id="@+id/passanger_conditioner_checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/ST_condicioner" />
+
+                    <CheckBox
+                        android:id="@+id/passanger_atplace_checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_toRightOf="@+id/passanger_conditioner_checkBox"
+                        android:text="@string/ST_athome" />
+
+                    <CheckBox
+                        android:id="@+id/passanger_cigar_checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/passanger_conditioner_checkBox"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/ST_sigar" />
+
+                    <CheckBox
+                        android:id="@+id/passanger_baggage_checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/passanger_conditioner_checkBox"
+                        android:layout_toEndOf="@+id/passanger_cigar_checkBox"
+                        android:layout_toRightOf="@+id/passanger_cigar_checkBox"
+                        android:text="@string/ST_baggage" />
+
+                    <CheckBox
+                        android:id="@+id/passanger_animal_checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/passanger_conditioner_checkBox"
+                        android:layout_toEndOf="@+id/passanger_baggage_checkBox"
+                        android:layout_toRightOf="@+id/passanger_baggage_checkBox"
+                        android:text="@string/ST_animals" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/add_statement_inline_padding">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp">
+
+                    <EditText
+                        android:id="@+id/passanger_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="კომენტარი" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:padding="@dimen/add_statement_inline_padding">
+
+                <Button
+                    android:id="@+id/done_passanger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="დადასტურება" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
