@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kdiakonidze.pickmeapp">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -23,12 +24,37 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AddStatement" />
-        <activity android:name=".DetailPageDriver" />
-        <activity android:name=".DetailPagePassanger" />
-        <activity android:name=".EditMyStatement" />
-        <activity android:name=".FavoriteStatements" />
-        <activity android:name=".MyStatements"></activity>
+        <activity android:name=".AddStatement"
+            android:label="@string/title_activity_add_statement"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".DetailPageDriver"
+            android:label="@string/title_activity_detail_page"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".DetailPagePassanger"
+            android:label="@string/title_activity_detail_page_passanger"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".EditMyStatement"
+            android:label="რედაქტირება" />
+        <activity android:name=".FavoriteStatements"
+            android:label="რჩეული განცხ."
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.kdiakonidze.pickmeapp.MainActivity" />
+        </activity>
+
+        <activity android:name=".MyStatements"
+            android:label="ჩემი განცხ."
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.kdiakonidze.pickmeapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     </application>
 
 </manifest>
