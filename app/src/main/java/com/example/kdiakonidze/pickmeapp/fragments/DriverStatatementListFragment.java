@@ -212,15 +212,14 @@ public class DriverStatatementListFragment extends Fragment {
                 }
                 break;
             case Constantebi.FAVORIT_STAT:
-                // http://back.meet.ge/get.php?type=FAV&sub_type=1&id=158,161
                 if (Constantebi.FAV_STAT_DRIVER.size() > 0) {
-                    url = "http://back.meet.ge/get.php?type=FAV&sub_type=1&id=";
+                    url = Constantebi.URL_GET_ST_LIST + "stType=1&ID_list=";
                     for (int i = 0; i < Constantebi.FAV_STAT_DRIVER.size(); i++) {
                         url += String.valueOf(Constantebi.FAV_STAT_DRIVER.get(i));
                         if (i < Constantebi.FAV_STAT_DRIVER.size() - 1) url += ",";
                     }
                 } else {
-                    url = "http://back.meet.ge/get.php?type=FAV&sub_type=1&id=1";
+                    url = Constantebi.URL_GET_ST_LIST + "stType=1&ID_list=1";
                 }
                 break;
         }
