@@ -1,5 +1,6 @@
 package com.example.kdiakonidze.pickmeapp.dialogs;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -84,6 +85,12 @@ public class FilterDialog extends DialogFragment {
             dateSpinner2.setSelection(getIndexInSpinner(dateSpinner2, setedDate2));
         }
     };
+
+    OnFilterDone onFilterDone;
+
+    public interface OnFilterDone{
+        public void sendCreteria(String criteria);
+    }
 
     @NonNull
     @Override
@@ -216,11 +223,13 @@ public class FilterDialog extends DialogFragment {
                 Constantebi.FILTER_PS = filterPassanger.isChecked();
 
                 Constantebi.IS_FILTERED = true;
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(getActivity(), MainActivity.class);
+//                startActivity(intent);
 //
 //                DriverStatatementListFragment dlf = new DriverStatatementListFragment();
 //                dlf.getDriversStatements();
+
+                onFilterDone.sendCreteria("C R I T E R I A !!!!");
 
                 dismiss();
             }
@@ -303,5 +312,11 @@ public class FilterDialog extends DialogFragment {
             }
         }
         return index;
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        onFilterDone = (OnFilterDone) activity;
     }
 }

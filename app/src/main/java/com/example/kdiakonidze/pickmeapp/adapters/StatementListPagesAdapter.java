@@ -33,6 +33,7 @@ public class StatementListPagesAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         if(position == 0){
             fragment = new DriverStatatementListFragment();
+            bundle.putString("TAG","driver_fragment");
             fragment.setArguments(bundle);
         }
         if(position == 1){
@@ -41,6 +42,8 @@ public class StatementListPagesAdapter extends FragmentPagerAdapter {
         }
         return fragment;
     }
+
+
 
     @Override
     public int getCount() {

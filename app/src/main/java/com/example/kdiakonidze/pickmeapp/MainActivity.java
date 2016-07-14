@@ -1,5 +1,6 @@
 package com.example.kdiakonidze.pickmeapp;
 
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -49,6 +50,7 @@ import com.example.kdiakonidze.pickmeapp.datebase.DBmanager;
 import com.example.kdiakonidze.pickmeapp.datebase.DBscheme;
 import com.example.kdiakonidze.pickmeapp.dialogs.FilterDialog;
 import com.example.kdiakonidze.pickmeapp.dialogs.PrivateInfo;
+import com.example.kdiakonidze.pickmeapp.fragments.DriverStatatementListFragment;
 import com.example.kdiakonidze.pickmeapp.models.Cities;
 import com.example.kdiakonidze.pickmeapp.models.DriverStatement;
 import com.example.kdiakonidze.pickmeapp.models.PassangerStatement;
@@ -78,7 +80,7 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FilterDialog.OnFilterDone {
 
     private MenuItem menuItemFilter;
     private int movida = 0;
@@ -92,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
     CallbackManager callbackManager;
 
     private ViewPager pager = null;
+    private StatementListPagesAdapter myadapter;
     private TabLayout tabs;
 
 
@@ -123,12 +126,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-//        if(Constantebi.accessToken == null){
-//            Intent intent = new Intent(getApplication(), LoginActivity.class);
-//
-//            startActivity(intent);
-//        }
+        Toast.makeText(this, "ResumE !", Toast.LENGTH_LONG).show();
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(this, "PauZa !", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -250,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
 
         pager = (ViewPager) findViewById(R.id.pageView);
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-        StatementListPagesAdapter myadapter;
+
         if (Constantebi.IS_FILTERED){
             myadapter = new StatementListPagesAdapter(fragmentManager, Constantebi.FILTERED_STAT);
         }else {
@@ -528,6 +533,18 @@ public class MainActivity extends AppCompatActivity {
 
         Constantebi.accessToken = null;
         Constantebi.profile = null;
+    }
+
+    @Override
+    public void sendCreteria(String criteria) {
+//        DriverStatatementListFragment currDriverStatements = (DriverStatatementListFragment) getSupportFragmentManager().findFragmentByTag("driver_fragment");
+        DriverStatatementListFragment currDriverStatements = (DriverStatatementListFragment) myadapter.getItem(0);
+
+        if(currDriverStatements != null) {
+            currDriverStatements.reNewData(criteria);
+        }else {
+            Toast.makeText(this, "no fragment", Toast.LENGTH_LONG).show();
+        }
     }
 
     private class AsyncWrite extends AsyncTask<DBhelper, String, String> {
